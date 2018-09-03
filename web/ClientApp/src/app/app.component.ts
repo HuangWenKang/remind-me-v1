@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   dueDate: Date;
   reminder: Reminder;
   reminders: Reminder[];
+  minDate: Date = new Date();
 
   constructor(
     private fb: FormBuilder,
