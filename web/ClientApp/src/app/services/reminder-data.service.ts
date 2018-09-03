@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
-import { Reminder } from '../models/reminder';
-import { UUID } from 'angular2-uuid';
+import { Injectable } from "@angular/core";
+import { Reminder } from "../models/reminder";
+import { UUID } from "angular2-uuid";
 
 @Injectable()
 export class ReminderDataService {
   reminders: Reminder[] = [];
 
-  constructor() { }
+  constructor() {}
 
   addReminder(reminder: Reminder): ReminderDataService {
     reminder.id = UUID.UUID();
@@ -15,8 +15,7 @@ export class ReminderDataService {
   }
 
   deleteTodoById(id: string): ReminderDataService {
-    this.reminders = this.reminders
-      .filter(r => r.id !== id);
+    this.reminders = this.reminders.filter(r => r.id !== id);
     return this;
   }
 

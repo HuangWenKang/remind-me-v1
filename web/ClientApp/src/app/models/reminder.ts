@@ -1,9 +1,9 @@
 export class Reminder {
-    id: string = '';
-    title: string = '';
-    dueDate: Date = new Date();
+  id = "";
+  title = "";
+  dueDate: Date = new Date();
 
-    constructor(values: Object = {}) {
-        Object.assign(this, values);
-    }
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }
