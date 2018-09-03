@@ -4,7 +4,7 @@ This repository contains the source code of the first version of the application
 
 ## Getting started
 
-Copy the source code of the application to your system. The web application is present in the **web** folder in the project directory. The Angular application is present in the **/web/ClientApp/** directory.
+Copy the source code of the application to your system and open the workspace `remind-me.code-workspace` in Visual Studio Code. The web application is present in the **web** folder in the project directory. The Angular application is present in the **/web/ClientApp/** directory.
 
 ### Prerequisites
 

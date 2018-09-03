@@ -1,17 +1,24 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM microsoft/dotnet:2.1-sdk as build-env
 WORKDIR /app
 
-WORKDIR /src
-COPY remind-me.csproj web/
-RUN dotnet restore web/remind-me.csproj
-WORKDIR /src/web
+# copy csproj and restore as distinct layers
 COPY . .
-RUN dotnet build remind-me.csproj -c Release -o /app
+RUN dotnet restore
+RUN dotnet build remind-me.csproj -c Release
 
-FROM build AS publish
-RUN dotnet publish remind-me.csproj -c Release -o /app
+FROM node as clientBuild
+# RUN dotnet build remind-me.csproj -c Release -o /app
+#Do npm restore and other Node stuff.
 
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS runtime
+#Merge the contents of your .NET build env and your clientBuild and publish.
+FROM build-env as publish
+# copy everything else and build
+COPY --from=clientBuild . .
+RUN dotnet publish -c Release -o out
+
+# build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
-COPY --from=publish /app/ .
-ENTRYPOINT ["dotnet", "web/remind-me.dll"]
+
+COPY --from=publish /app/out .
+ENTRYPOINT ["dotnet", "remind-me.dll"]
