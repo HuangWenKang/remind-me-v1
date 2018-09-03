@@ -30,7 +30,7 @@ The following command will run the project.
 dotnet run
 ```
 
-Running the project from VS Code will automatically launch the browser with the application. Otherwise, navigate to the application URL generated from the command output: https://localhost:5001
+Running the project from VS Code will automatically launch the browser with the application. Otherwise, navigate to the application URL generated from the command output: https://localhost:5001. Since the application uses a user generated certificate, you can ignore the certificate error displayed by the browser.
 
 ## Running the tests
 
