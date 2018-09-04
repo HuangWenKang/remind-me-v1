@@ -64,7 +64,17 @@ Execute the following command to start a container named `remind-me-web-c` using
 docker run -d -p 8080:80 --name remind-me-web-c remind-me-web
 ```
 
-From your browser, navigate to http://localhost:8080 to view the application.
+From your browser, navigate to http://localhost:8080 to view the application. To keep this image consistent with the book, we will never update the tag of this image. Tag your image using the following command.
+
+```
+docker tag remind-me-web kubernetessuccinctly/remind-me-web:1.0.0
+```
+
+We will now push the image to Docker Hub. To authenticate, execute the command `docker login` with your credentials. Push the image to Docker Hub using the following command.
+
+```
+docker push kubernetessuccinctly/remind-me-web:1.0.0
+```
 
 ## Contributing
 
@@ -74,5 +84,3 @@ The contributions to this repository are limited to improving the quality of the
 
 - **Rahul Rai** - Creator - [rahulrai-in](https://github.com/rahulrai-in)
 - **Tarun Pabbi** - Creator - [tarunp](https://github.com/tarunp)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
