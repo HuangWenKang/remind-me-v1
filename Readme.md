@@ -52,7 +52,19 @@ ng e2e
 
 ## Deployment
 
-The application is deployed as an image to DockerHub. The **Web** folder contains the DockerFile used for building the application image.
+The application is deployed as an image to DockerHub. The **Web** folder contains the DockerFile used for building the application image. Execute the following command to build the image after changing to the **web** directory.
+
+```
+docker build -t remind-me-web .
+```
+
+Execute the following command to start a container named `remind-me-web-c` using the generated image on your Docker instance.
+
+```
+docker run -d -p 8080:80 --name remind-me-web-c remind-me-web
+```
+
+From your browser, navigate to http://localhost:8080 to view the application.
 
 ## Contributing
 
