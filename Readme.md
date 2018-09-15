@@ -1,6 +1,6 @@
 # Remind Me v1.0
 
-This repository contains the source code of the first version of the application that we will deploy to our Kubernetes cluster. You can read more about this application and the steps that you need to follow to deploy this application in chapter three of the book. This is a simple .net Core Angular application that saves reminders in memory and loses the state on refreshing the browser.
+This repository contains the source code of the first version of the application that we will deploy to our Kubernetes cluster. You can read more about this application and the steps that you need to follow to deploy this application in chapter three of the book. This is a simple .Net Core Angular application that saves reminders in memory and loses the state on refreshing the browser.
 
 ## Getting started
 
