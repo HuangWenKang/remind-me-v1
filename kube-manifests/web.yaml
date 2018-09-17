@@ -30,9 +30,9 @@ metadata:
 spec:
   type: NodePort # type of service
   ports:
-    - port: 8080 # service will accept traffic on port 8080
+    - port: 8080 # any service in the same namespace can talk to this services using this port.
       protocol: TCP
-      targetPort: 80 # traffic on port 8080 will be forwarded to port 80 of service
-      nodePort: 31120 # service will send and receive data from port 31120 of nodes.
+      targetPort: 80 # our web application is running on this port in pod. By default targetPort = port.
+      nodePort: 31120 # external users can access this service on port 31120 using kube-proxy.
   selector:
     app: remindmeweb
