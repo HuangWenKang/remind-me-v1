@@ -1,5 +1,5 @@
 # Create a deployment. This will deploy our app on multiple nodes.
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: remindmeweb-deployment # name of our deployment

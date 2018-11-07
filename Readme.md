@@ -69,6 +69,7 @@ From your browser, navigate to http://localhost:8080 to view the application. Ta
 ```
 docker tag remind-me-web kubernetessuccinctly/remind-me-web:1.0.0
 ```
+
 To keep this image tag consistent with the book, we will never update the tag of this image.
 
 We will now push the image to Docker Hub. To authenticate, execute the command `docker login` with your credentials. Push the image to Docker Hub using the following command.
@@ -79,7 +80,7 @@ docker push kubernetessuccinctly/remind-me-web:1.0.0
 
 ## Contributing
 
-The contributions to this repository are limited to improving the quality of the solution without modifying its behavior. This will help us keep the solution relevant to the content in the book. If you are interested in collaborating, please raise an issue in the repository so that we can connect with you.
+The contributions to this repository are limited to improving the quality of the solution without modifying its behavior. This approach will help us keep the solution relevant to the content in the book. If you are interested in contributing to the development, please raise an issue in the repository.
 
 ## Authors
 
