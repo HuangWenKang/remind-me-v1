@@ -36,7 +36,7 @@ Running the project from VS Code will automatically launch the browser with the 
 
 Unit tests in this project are written using the Jasmine framework running on Karma. The end to end tests are written using the Protractor framework. To execute the tests, change directory to **/web/ClientApp/** directory.
 
-### Running the unit tests
+### Unit tests
 
 The following command will run the unit tests in the application.
 
@@ -44,7 +44,9 @@ The following command will run the unit tests in the application.
 ng test
 ```
 
-The following command will run the end to end tests.
+### End to End Tests
+
+The following command will run the end to end tests in the application.
 
 ```
 ng e2e
