@@ -1,6 +1,6 @@
 # Remind Me v1.0
 
-This repository contains the source code of the first version of the application that we will deploy to our Kubernetes cluster. You can read more about this application and the steps that you need to follow to deploy this application in chapter three of the book. This is a simple .Net Core Angular application that saves reminders in memory and loses the state on refreshing the browser.
+This repository contains the source code of the first version of the application that we will deploy to our Kubernetes cluster. You can read more about this application and the steps that you need to follow to deploy this application in chapter three of the book. This is a simple .Net Core Angular application that saves reminders in browser memory and loses the state on refreshing the browser.
 
 ## Getting started
 
@@ -74,12 +74,11 @@ docker tag remind-me-web kubernetessuccinctly/remind-me-web:1.0.0
 
 To keep this image tag consistent with the book, we will never update the tag of this image.
 
-We will now push the image to Docker Hub. To authenticate, execute the command `docker login` with your credentials. Push the image to Docker Hub using the following command.
+We will now push the image to Docker Hub. To authenticate, execute the command `docker login` with your credentials. Push the image to Docker Hub using the following command. 
 
 ```
 docker push kubernetessuccinctly/remind-me-web:1.0.0
 ```
-
 ## Contributing
 
 The contributions to this repository are limited to improving the quality of the solution without modifying its behavior. This approach will help us keep the solution relevant to the content in the book. If you are interested in contributing to the development, please raise an issue in the repository.
